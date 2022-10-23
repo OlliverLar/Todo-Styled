@@ -1,0 +1,144 @@
+body{
+    background: rgb(255,206,206);
+    background: linear-gradient(180deg, rgba(255,206,206,1) 0%, rgba(255,123,123,1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.mainWindow {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    width: 600px;
+    min-height: 350px;
+    position: relative;
+    box-shadow: 1px 2px 2px 2px rgba(233, 139, 139, 0.5);
+    animation: startUp 1s ease-out both;
+}
+
+@keyframes startUp {
+    0% {
+              transform: translateY(-1000px);
+      opacity: 0;
+    }
+    50% {
+              transform: translateY(50px);
+      opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+    opacity: 1;
+    }
+}
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    animation: 4s fadeIn;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+input {
+    font-size: 0.8em;
+    width: 250px;
+    animation: 6s fadeIn;
+    
+}
+
+p {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 0.7em;
+    animation: 5s fadeIn;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    height: 35px;
+    width: 60px;
+    font-size: 0.6em;
+    margin-left: 10px;
+    animation: 6s fadeIn;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: black;
+    transition: all 1s ease;
+}
+
+.completed-active {
+    color: gray;
+}
+
+li {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 3px;
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: pointer;
+    transition: 0.5s;
+    animation: listItems 0.1s ease-in-out;
+    font-size: x-large;
+}
+
+@keyframes listItems {
+    0% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+  }
+
+#message {
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 5px;
+    font-size: 0.7em;
+    animation-name: flash;
+    animation-duration: 3s;
+    animation-iteration-count: 2;
+    color: red;
+}
+@keyframes flash {
+    0% {
+        color: red;
+    }
+    25% {
+        color: transparent;
+    }
+    50% {
+        color: red
+    }
+    75% {
+        color: transparent;
+    }
+    100% {
+        color: red;
+    }
+}
+#deleteBtn {
+    font-size: larger;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
